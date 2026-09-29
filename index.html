@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <section class="options">
+            <!-- Adicionamos um atributo data-target para saber qual tela abrir -->
+            <div class="option ativa">
+                <button onclick="mudarTela('inicio')">Início</button>
+            </div>
+            <div class="option">
+                <button onclick="mudarTela('jogos')">Jogos</button>
+            </div>
+            <div class="option">
+                <button onclick="mudarTela('perfil')">Perfil</button>
+            </div>
+        </section>
+    </aside>
+
+    <main class="main">
+
+        <!-- TELA 1: Vísivel inicialmente por padrão -->
+        <section id="tela-inicio" class="tela inicio ">
+            <div class="titulo">
+                <h1>Games Stats Dashboard</h1>
+                <h3>Um site para apresentar seus status nos jogos</h3>
+            </div>
+
+            <div class="apresentacao">
+                <p>
+                    Olá, desde cedo sempre amei jogar videogames, e sempre tive a dificuldade de ver meus status e
+                    conquistas nos jogos de maneira fácil.
+                    <br>Por isso desenvolvi esse dashboard dinâmico para seus jogos vinculados à sua conta Steam.
+                    <br>Aproveite!
+                </p>
+                <button onclick="mudarTela('jogos')">Ver Meus Status</button>
+            </div>
+        </section>
+
+        <!-- TELA 2: Invisível inicialmente por padrão -->
+        <section id="tela-jogos" class="tela jogos ativa">
+            <div class="Titulo">
+                <h1>Seus jogos</h1>
+            </div>
+
+            <div class="Cards">
+                <article class="card">
+                    <img src="" alt="">
+                    <div class="conteudo">
+                        <div class="titulo">
+                            <h4></h4>
+                            <h5></h5>
+                        </div>
+                        <p></p>
+                        <a href=""></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="" alt="">
+                    <div class="conteudo">
+                        <div class="titulo">
+                            <h4></h4>
+                            <h5></h5>
+                        </div>
+                        <p></p>
+                        <a href=""></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="" alt="">
+                    <div class="conteudo">
+                        <div class="titulo">
+                            <h4></h4>
+                            <h5></h5>
+                        </div>
+                        <p></p>
+                        <a href=""></a>
+                    </div>
+                </article>
+            </div>
+
+            <button onclick="mudarTela('perfil')">Ver Perfil</button>
+        </section>
+
+        <!-- TELA 3: Invisível inicialmente por padrão -->
+        <section id="tela-perfil" class="tela perfil">
+            <h1>Astro</h1>
+        </section>
+
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>
