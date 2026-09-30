@@ -1,6 +1,13 @@
 @keyframes mudarTela {
-    from {opacity: 0; transform: translateY(5px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 * {
@@ -11,6 +18,7 @@
 
 :root {
     --teste: 1px solid black;
+    --transition: all 0.3s ease-in-out;
 }
 
 html,
@@ -21,59 +29,75 @@ body {
     background: #f0f0f0;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: row;
 }
 
 .sidebar {
-    width: 15%;
+    width: 10%;
     height: 100%;
 
-    border: var(--teste);
-    border-radius: 0px 10px 10px 0px;
+    background: #333;
 
     .options {
         position: fixed;
         top: 0;
         left: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        padding-top: 1%;
+        
+        width: 10%;
+        height: 100%;
+
+        border: var(--teste);
+
+        .option{
+            width: 100%;
+            height: 50px;
+
+            border: none;
+            background: #555;
+        }
     }
 }
 
 .main {
     flex: 1;
 
-    width: 85%;
+    width: 90%;
     height: 100%;
 
     border: var(--teste);
 
-    .tela{
+    .tela {
         display: none;
         align-items: center;
         justify-content: center;
 
-        background: #333;
+        background: #d4d4d4;
         width: 100%;
         height: 100%;
     }
 
-    .inicio{
-        
-    }
+    .inicio {}
 
-    .jogos{
-        .Titulo{
+    .jogos {
+        .Titulo {
             padding-top: 15px;
 
-            h1{
+            h1 {
                 width: max-content;
                 margin: auto;
             }
         }
 
-        .Cards{
+        .Cards {
             width: 100%;
             margin-top: 5%;
 
@@ -84,37 +108,50 @@ body{
             flex-wrap: wrap;
             gap: 50px;
 
-            .card{
+            .card {
+                display: flex;
+                flex-direction: row;
+
                 width: 35%;
-                height: 60px;
+                height: 120px;
                 margin: auto;
 
-                background: #f0f0f0;
+                background: #a5a5a5;
+                border-radius: 10px;
+                transition: var(--transition);
 
-                img{
-                    width: 50px;
-                    height: 25px;
+                img {
+                    border-radius: 10px 0 0 10px;
                 }
 
-                .conteudo{
-                    .titulo{
-                        h4{
-                            color: #b4b4b4;
+                .conteudo {
+                    .titulo {
+                        h3 {
+                            color: #000;
                         }
-                        h5{
+
+                        h4 {
                             color: #b4b4b4;
                         }
                     }
+
+                    details,
+                    details summary {
+                        display: inline;
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover{
+                    transform: scale(1.1);
                 }
             }
         }
     }
 
-    .perfil{
+    .perfil {}
 
-    }
-
-    .ativa{
+    .ativa {
         display: block;
 
         animation: mudarTela 0.3s ease-in-out;

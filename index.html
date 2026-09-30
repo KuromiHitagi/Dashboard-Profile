@@ -12,15 +12,12 @@
     <aside class="sidebar">
         <section class="options">
             <!-- Adicionamos um atributo data-target para saber qual tela abrir -->
-            <div class="option ativa">
-                <button onclick="mudarTela('inicio')">Início</button>
-            </div>
-            <div class="option">
-                <button onclick="mudarTela('jogos')">Jogos</button>
-            </div>
-            <div class="option">
-                <button onclick="mudarTela('perfil')">Perfil</button>
-            </div>
+            <button class="option ativa" onclick="mudarTela('inicio')">Início</button>
+
+            <button class="option" onclick="mudarTela('jogos')">Jogos</button>
+
+            <button class="option" onclick="mudarTela('perfil')">Perfil</button>
+
         </section>
     </aside>
 
@@ -52,11 +49,30 @@
 
             <div class="Cards">
                 <article class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlSLmz3J5xUoQpQKXZGa5royEiGZlpJByvKPfuiYStYw&s"
+                        width="220px" alt="Terraria">
+                    <div class="conteudo">
+                        <div class="titulo">
+                            <h3>Terraria</h3>
+                            <h4>600.3h</h4>
+                        </div>
+                        <details>
+                            <summary>Terraria é um jogo de aventura, ação e RPG em mundo aberto no estilo sandbox (caixa
+                                de areia) focado em exploração<small>...</small></summary>
+                            <p> construção e combate. O mundo é gerado proceduralmente em duas dimensões (2D),
+                                garantindo que cada partida seja única.</p>
+                        </details>
+
+                        <a href="https://www.google.com/goto?url=CAESawHrOzAVD564aPLHnMJQT5_27wW3BjNqpQuvi3TYZwIy8bzTFDVbqp9aoxlfay_hrTcZpq6q35nVUtY0wty6RhN-pVfDAo0mXUJY8AfGGcnnSlRumfUztJ_1kVqoydaEr3YHv5SILVrUpTJx"
+                            target="_blank">Ver Mais</a>
+                    </div>
+                </article>
+                <article class="card">
                     <img src="" alt="">
                     <div class="conteudo">
                         <div class="titulo">
                             <h4></h4>
-                            <h5></h5>
+                            <h5>450.7h</h5>
                         </div>
                         <p></p>
                         <a href=""></a>
@@ -67,18 +83,7 @@
                     <div class="conteudo">
                         <div class="titulo">
                             <h4></h4>
-                            <h5></h5>
-                        </div>
-                        <p></p>
-                        <a href=""></a>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="" alt="">
-                    <div class="conteudo">
-                        <div class="titulo">
-                            <h4></h4>
-                            <h5></h5>
+                            <h5>300.5h</h5>
                         </div>
                         <p></p>
                         <a href=""></a>
@@ -97,4 +102,5 @@
     </main>
 </body>
 <script src="./script.js"></script>
+
 </html>
